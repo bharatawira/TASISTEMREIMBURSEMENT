@@ -3,7 +3,7 @@
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h4 class="card-title" align="center">Laporan</h4>
+                <h4 class="card-title" align="center">Karyawan</h4>
               </div>
               <div class="card-body">
                 <div class="table-responsive">
@@ -13,19 +13,16 @@
                             No
                         </th>
                       <th>
-                        Nama
+                        Name
                       </th>
                       <th>
-                        Jenis Ikan
+                        Username
                       </th>
                       <th>
-                        Harga
+                        Role
                       </th>
                       <th>
-                          Status
-                      </th>
-                      <th>
-                          Date
+                          Action
                       </th>
                     </thead>
                     <tbody>
@@ -36,13 +33,11 @@
                             ?>
                       <tr>
                             <td><?= $no;?></td>
-                            <td><?= $user['nama'];?></td>
-                            <td><?= $user['jenis_ikan'];?></td>
-                            <td><?= $user['harga'];?></td>
-                            <td><?= $user['status'];?></td>
-                            <td><?= $user['date'];?></td>
+                            <td><?= $user['name'];?></td>
+                            <td><?= $user['username'];?></td>
+                            <td><?= $user['role'];?></td>
                             <td>
-                                <a href="<?= base_url('dashboard/delete_nota/'.$user['id'])?>" class="btn btn-danger btn-circle">
+                                <a href="<?= base_url('dashboard/delete_user/'.$user['id'])?>" class="btn btn-danger btn-circle">
                                 <i class="fas fa-trash"></i>
                                 </a>
                             </td>

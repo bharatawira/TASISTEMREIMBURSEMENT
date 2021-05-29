@@ -27,7 +27,7 @@ class Main extends BD_Controller {
 
         if ($id === NULL)
         {
-            $getUser = $this->Crud->readData('name,username,role','user')->result();
+            $getUser = $this->Crud->readData('id,name,username,role','user')->result();
             if ($getUser)
             {
                 // Set the response and exit
@@ -157,15 +157,17 @@ class Main extends BD_Controller {
 
     public function nota_post() {
         $nama = $this->post('nama');
-        $pembuat_nota = $this->post('pembuat_nota');
-        $created_date = date('Y-m-d');
+        $jenis_ikan = $this->post('jenis_ikan');
+        $harga = $this->post('harga');
         $status = $this->post('status');
+        $date = date('Y-m-d');
 
         $data = [
             "nama"=>$nama,
-            "pembuat_nota"=>$pembuat_nota,
-            "created_date"=>$created_date,
-            "status"=>$status
+            "jenis_ikan"=>$jenis_ikan,
+            "harga"=>$harga,
+            "status"=>$status,
+            "date"=>$date
         ];
 
         $createnota = $this->Crud->createData('nota',$data);
@@ -197,7 +199,7 @@ class Main extends BD_Controller {
 
         if ($id === NULL)
         {
-            $getUser = $this->Crud->readData('id,nama,pembuat_nota,created_date,status','nota')->result();
+            $getUser = $this->Crud->readData('id,nama,jenis_ikan,harga,status,date','nota')->result();
             if ($getUser)
             {
                 // Set the response and exit
@@ -226,7 +228,7 @@ class Main extends BD_Controller {
             $where = [
                 'id'=> $id
             ];
-            $getUserById = $this->Crud->readData('id,nama,pembuat_nota,created_date,status','nota',$where)->result();
+            $getUserById = $this->Crud->readData('id,nama,jenis_ikan,harga,status,date','nota',$where)->result();
 
             if($getUserById){
                 $output = [
@@ -259,10 +261,11 @@ class Main extends BD_Controller {
 
             if($cekId > 0){
                 $data = [
-                    "nama"      => $this->put('nama'),
-                    "pembuat_nota"  => $this->put('pembuat_nota'),
-                    "created_date"  => $this->put('created_date'),
-                    "status"      => $this->put('status')
+                    "nama"          => $this->put('nama'),
+                    "jenis_ikan"    => $this->put('jenis_ikan'),
+                    "harga"         => $this->put('harga'),
+                    "status"        => $this->put('status'),
+                    "date"          => $this->put('date')
                 ];
 
                 $updateData = $this->Crud->updateData('nota',$data,$where);
