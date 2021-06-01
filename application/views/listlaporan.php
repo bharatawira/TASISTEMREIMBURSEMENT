@@ -41,11 +41,7 @@
                             <td><?= $user['harga'];?></td>
                             <td><?= $user['status'];?></td>
                             <td><?= $user['date'];?></td>
-                            <td>
-                                <a href="<?= base_url('dashboard/delete_nota/'.$user['id'])?>" class="btn btn-danger btn-circle">
-                                <i class="fas fa-trash"></i>
-                                </a>
-                            </td>
+                            
                         </tr>
                     <?php
 

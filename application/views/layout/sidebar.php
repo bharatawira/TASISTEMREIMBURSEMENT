@@ -20,13 +20,13 @@
             </a>
           </li>
           <li>
-            <a href="./listlaporan">
+            <a href="<?= base_url('dashboard/listlaporan')?>">
               <i class="now-ui-icons location_map-big"></i>
               <p>List Laporan</p>
             </a>
           </li>
           <li>
-            <a href="./listkaryawan">
+            <a href="<?= base_url('dashboard/listkaryawan')?>">
               <i class="now-ui-icons users_single-02"></i>
               <p>List Karyawan</p>
             </a>

@@ -10,7 +10,7 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="">Dashboard</a>
+            <a class="navbar-brand" href=""></a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -21,7 +21,7 @@
             
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="<?= base_url('dashboard/logout')?>">
                   <p>
                     <span>Logout</span>
                   </p>
