@@ -31,6 +31,12 @@
               <p>List Karyawan</p>
             </a>
           </li>
+          <li>
+            <a href="<?= base_url('dashboard/listikancupang')?>">
+              <i class="now-ui-icons education_paper"></i>
+              <p>List Ikan Cupang</p>
+            </a>
+          </li>
         </ul>
       </div>
     </div>

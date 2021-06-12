@@ -80,4 +80,36 @@ class Auth extends BD_Controller {
             $this->set_response($output, REST_Controller::HTTP_BAD_REQUEST);
         }
     }
+
+    public function tambahcupang_post(){
+        $namaikan = $this->post('nama_ikan');
+        $harga = ($this->post('harga'));
+        $gambar = $this->post('gambar');
+
+        $data = [
+            "nama_ikan"=>$namaikan,
+            "harga"=>$harga,
+            "gambar"=>$gambar
+        ];
+        
+        $createIkanCupang = $this->Crud->createData('cupang',$data);
+
+        if($createIkanCupang) {
+            $output = [
+                'status' => 200,
+                'error' => false,
+                'message' => 'Success create ikan cupang',
+                'data' => $data
+            ];
+            $this->set_response($output, REST_Controller::HTTP_OK);
+        }else{
+            $output = [
+                'status' =>400,
+                'error' => false,
+                'message' => 'Failed create ikan cupang',
+                'data'=> []
+            ];
+            $this->set_response($output, REST_Controller::HTTP_BAD_REQUEST);
+        }
+    }
 }

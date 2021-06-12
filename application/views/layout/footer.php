@@ -7,23 +7,7 @@
       <footer class="footer">
         <div class=" container-fluid ">
           <nav>
-            <ul>
-              <li>
-                <a href="">
-                  Creative Tim
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="h">
-                  Blog
-                </a>
-              </li>
-            </ul>
+            
           </nav>
           <div class="copyright" id="copyright">
             &copy; <script>

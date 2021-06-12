@@ -1,6 +1,6 @@
 <?php
 /**
- * @author   Natan Felles <natanfelles@gmail.com>
+ * @author  
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 

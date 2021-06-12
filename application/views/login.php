@@ -18,7 +18,7 @@
           
           
           <a href="home.html">
-          <button type="submit" name="go" class="btn btn-lg btn-primary btn-block">Sign in</button></a>
+          <button type="submit" name="go" class="btn btn-lg btn-primary btn-block">Login</button></a>
         
         
         </form>
