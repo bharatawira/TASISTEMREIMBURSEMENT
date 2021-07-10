@@ -3,12 +3,9 @@
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h4 class="card-title" align="center">Laporan</h4>
+                <h4 class="card-title" align="center">List Laporan</h4>
               </div>
-              <button class="btn btn-info"   type="button" data-toggle="modal" data-target="#exampleModal">
-                  <i class="fas fa-plus"></i>
-                Tambah
-              </button>
+            
               <div class="card-body">
                 <div class="table-responsive">
                   <table class="table">
@@ -17,22 +14,25 @@
                             No
                         </th>
                       <th>
-                        Nama
+                        Nama Karyawan
                       </th>
                       <th>
                         Jenis Ikan
                       </th>
                       <th>
-                        Harga
+                        Nama Pembeli
                       </th>
                       <th>
-                          Status
+                        No Telpon Pembeli
                       </th>
                       <th>
-                          Date
+                        Alamat Pembeli
                       </th>
                       <th>
-                          Action
+                        Harga Jual
+                      </th>
+                      <th>
+                        Date
                       </th>
                     </thead>
                     <tbody>
@@ -43,18 +43,15 @@
                             ?>
                       <tr>
                             <td><?= $no;?></td>
-                            <td><?= $user['nama'];?></td>
-                            <td><?= $user['jenis_ikan'];?></td>
-                            <td><?= $user['harga'];?></td>
-                            <td><?= $user['status'];?></td>
+                            <td><?= $user['name'];?></td>
+                            <td><?=$user['nama_cupang'];?></td>
+                            <td><?= $user['nama_pembeli'];?></td>
+                            <td><?= $user['notelp_pembeli'];?></td>
+                            <td><?= $user['alamat_pembeli'];?></td>
+                            <td><?= $user['harga_penjualan'];?></td>
                             <td><?= $user['date'];?></td>
                             <td>
-                            <a href="<?= base_url('dashboard/edit_nota/'.$user['id'])?>"" class="btn btn-warning btn-circle">
-                                <i class="fas fa-pen"></i>
-                                </a>
-                                <a href="<?= base_url('dashboard/delete_nota/'.$user['id'])?>" class="btn btn-danger btn-circle">
-                                <i class="fas fa-trash"></i>
-                                </a>
+                            
                             </td>
                         </tr>
                     <?php
@@ -77,13 +74,13 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Tambah Menu</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Tambah Laporan</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-      <form method="POST" enctype="multipart/form-data" action="<?= base_url('dashboard/create_menu'); ?>">
+      <form method="POST" enctype="multipart/form-data" action="<?= base_url('dashboard/create_nota'); ?>">
             <div class="form-group">
                 <label for="exampleInputEmail1">Nama</label>
                 <input type="text" class="form-control" name="nama" required>
@@ -118,7 +115,6 @@
             </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
         <button type="submit" class="btn btn-success">Simpan</button>
         </form>
       </div>

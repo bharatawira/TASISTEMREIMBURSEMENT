@@ -81,17 +81,16 @@ class Auth extends BD_Controller {
         }
     }
 
-    public function tambahcupang_post(){
+    public function aaaa_post(){
         $namaikan = $this->post('nama_ikan');
-        $harga = ($this->post('harga'));
+        $harga = $this->post('harga');
         $gambar = $this->post('gambar');
-
         $data = [
             "nama_ikan"=>$namaikan,
             "harga"=>$harga,
-            "gambar"=>$gambar
+            "gambar"=>$target_path
         ];
-        
+
         $createIkanCupang = $this->Crud->createData('cupang',$data);
 
         if($createIkanCupang) {

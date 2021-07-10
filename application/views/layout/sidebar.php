@@ -19,18 +19,23 @@
               <p>Dashboard</p>
             </a>
           </li>
+          
           <li>
             <a href="<?= base_url('dashboard/listlaporan')?>">
               <i class="now-ui-icons location_map-big"></i>
               <p>List Laporan</p>
             </a>
           </li>
+          
+         
           <li>
-            <a href="<?= base_url('dashboard/listkaryawan')?>">
+              <a href="<?= base_url('dashboard/listkaryawan')?>"> 
               <i class="now-ui-icons users_single-02"></i>
               <p>List Karyawan</p>
             </a>
-          </li>
+            </li>
+      
+          
           <li>
             <a href="<?= base_url('dashboard/listikancupang')?>">
               <i class="now-ui-icons education_paper"></i>
